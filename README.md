@@ -5,6 +5,7 @@ Containerize 3 tire architecture
 
 Spring boot application using maven to build
 
+`mvn package -DskipTests=true`
 
 # UI
 
@@ -25,10 +26,9 @@ Nginx is use and has custom nginx.conf that uses reverse proxy to API for rest c
 After application is running we add the persons using
 
 `curl -X POST \
-  http://10.63.80.56:8080/person \
+  http://loalhost:8080/person \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json;charset=UTF-8' \
-  -H 'postman-token: d6607844-fd0e-f6b9-b522-3f23493e042c' \
   -d '{
 	"firstName": "Venu",
 	"lastName": "Reddy"
